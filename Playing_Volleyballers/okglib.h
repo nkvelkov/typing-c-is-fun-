@@ -1,4 +1,4 @@
-#ifndef OKGLIB_H_INCLUDED
+п»ї#ifndef OKGLIB_H_INCLUDED
 #define OKGLIB_H_INCLUDED
 
 struct OKG_POINT
@@ -19,37 +19,37 @@ float irandom(int a, int b);
 OKG_POINT spherical( float alpha, float beta, float r );
 float grad(float rad);
 
-// Рисуване на координатна система
+// Р РёСЃСѓРІР°РЅРµ РЅР° РєРѕРѕСЂРґРёРЅР°С‚РЅР° СЃРёСЃС‚РµРјР°
 void drawOxyz();
 
-// Рисуване на окръжности
+// Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєСЂСЉР¶РЅРѕСЃС‚Рё
 void drawCircleXY( float x, float y, float z, float r );
 void drawCircleYZ( float x, float y, float z, float r );
 void drawCircleXZ( float x, float y, float z, float r );
 void drawSolidCircleXY( float x, float y, float z, float r );;
 
-// Рисуване на куб
+// Р РёСЃСѓРІР°РЅРµ РЅР° РєСѓР±
 void drawCube( float x, float y, float z, float a );
 void drawSolidCube ( float x, float y, float z, float a );
 void drawSolidParalelogram (float x,float y,float z,float ax,float ay,float az);
 
-// Рисуване на цилиндър
+// Р РёСЃСѓРІР°РЅРµ РЅР° С†РёР»РёРЅРґСЉСЂ
 void drawCylinder( float x, float y, float z, float r, float h );
 void drawSolidCylinder( float x, float y, float z, float r, float h );
 void drawSmoothCylinder ( float x, float y, float z, float r, float h );
 void drawUnitCylinder ( );
 
-// Рисуване на конус
+// Р РёСЃСѓРІР°РЅРµ РЅР° РєРѕРЅСѓСЃ
 void drawCone( float x, float y, float z, float r, float h );
 void drawSolidCone ( float x, float y, float z, float r, float h );
 void drawSmoothCone ( float x, float y, float z, float r, float h );
 
-// Рисуване на сфера
+// Р РёСЃСѓРІР°РЅРµ РЅР° СЃС„РµСЂР°
 void drawSphere( float x, float y, float z, float r );
 void drawSolidSphere( float x, float y, float z, float r );
 void drawSmoothSphere( float x, float y, float z, float r );
 
-// Рисуване на елипсоид
+// Р РёСЃСѓРІР°РЅРµ РЅР° РµР»РёРїСЃРѕРёРґ
 void drawSmoothEllipsoid( float x, float y, float z, float rx, float ry, float rz );
 void drawSmoothEllipsoidPatch( float x, float y, float z, float rx, float ry, float rz, float a1, float a2, float b1, float b2 );
 

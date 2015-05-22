@@ -1,4 +1,4 @@
-/////////////////////////////////////////////////////////////////////////////
+п»ї/////////////////////////////////////////////////////////////////////////////
 // Name:        okglib.cpp
 // Author:      Pavel Boytchev
 // Created:     2013
@@ -101,7 +101,7 @@ void drawSolidCube (float x,float y,float z,float a)
 {
     a = a/2;
 
-    // Рисуване на стена откъм -X
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј -X
     glBegin( GL_POLYGON );
         glNormal3f(-1.0, 0.0, 0.0);
         glVertex3f(x-a, y-a, z-a);
@@ -110,7 +110,7 @@ void drawSolidCube (float x,float y,float z,float a)
         glVertex3f(x-a, y+a, z-a);
     glEnd();
 
-    // Рисуване на стена откъм +X
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј +X
     glBegin( GL_POLYGON );
         glNormal3f(+1.0, 0.0, 0.0);
         glVertex3f(x+a, y-a, z-a);
@@ -119,7 +119,7 @@ void drawSolidCube (float x,float y,float z,float a)
         glVertex3f(x+a, y+a, z-a);
     glEnd();
 
-    // Рисуване на стена откъм -Y
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј -Y
     glBegin( GL_POLYGON );
         glNormal3f(0.0, -1.0, 0.0);
         glVertex3f(x-a, y-a, z-a);
@@ -128,7 +128,7 @@ void drawSolidCube (float x,float y,float z,float a)
         glVertex3f(x+a, y-a, z-a);
     glEnd();
 
-    // Рисуване на стена откъм +Y
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј +Y
     glBegin( GL_POLYGON );
         glNormal3f(0.0, +1.0, 0.0);
         glVertex3f(x-a, y+a, z-a);
@@ -137,7 +137,7 @@ void drawSolidCube (float x,float y,float z,float a)
         glVertex3f(x+a, y+a, z-a);
     glEnd();
 
-    // Рисуване на стена откъм -Z
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј -Z
     glBegin( GL_POLYGON );
         glNormal3f(0.0, 0.0, -1.0);
         glVertex3f(x-a, y-a, z-a);
@@ -146,7 +146,7 @@ void drawSolidCube (float x,float y,float z,float a)
         glVertex3f(x+a, y-a, z-a);
     glEnd();
 
-    // Рисуване на стена откъм +Z
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚РµРЅР° РѕС‚РєСЉРј +Z
     glBegin( GL_POLYGON );
         glNormal3f(0.0, 0.0, +1.0);
         glVertex3f(x-a, y-a, z+a);
@@ -158,7 +158,7 @@ void drawSolidCube (float x,float y,float z,float a)
 
 void drawOxyz()
 {
-    // Рисуване на лъчите
+    // Р РёСЃСѓРІР°РЅРµ РЅР° Р»СЉС‡РёС‚Рµ
     glBegin( GL_LINES );
         // OX
         glVertex3f( 0.0, 0.0, 0.0 );
@@ -171,7 +171,7 @@ void drawOxyz()
         glVertex3f( 0.0, 0.0, 0.0 );
     glEnd();
 
-    // Рисуване на стрелките
+    // Р РёСЃСѓРІР°РЅРµ РЅР° СЃС‚СЂРµР»РєРёС‚Рµ
     glBegin( GL_TRIANGLES );
         // OX
         glVertex3f( 5.0, 0.0, 0.0 );
@@ -274,7 +274,7 @@ void drawCylinder ( float x, float y, float z, float r, float h )
         float dx2 = r*cos(alpha+dalpha);
         float dy2 = r*sin(alpha+dalpha);
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_LINE_LOOP );
             glVertex3f( x+dx1, y+dy1, z );
             glVertex3f( x+dx2, y+dy2, z );
@@ -282,14 +282,14 @@ void drawCylinder ( float x, float y, float z, float r, float h )
             glVertex3f( x+dx1, y+dy1, z+h );
         glEnd();
 
-        // Рисуване на парче от долната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РґРѕР»РЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_LINE_LOOP );
             glVertex3f( x,     y,     z );
             glVertex3f( x+dx1, y+dy1, z );
             glVertex3f( x+dx2, y+dy2, z );
         glEnd();
 
-        // Рисуване на парче от горната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РіРѕСЂРЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_LINE_LOOP );
             glVertex3f( x,     y,     z+h );
             glVertex3f( x+dx1, y+dy1, z+h );
@@ -313,14 +313,14 @@ void drawCone ( float x, float y, float z, float r, float h )
         float dx2 = r*cos(alpha+dalpha);
         float dy2 = r*sin(alpha+dalpha);
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_LINE_LOOP );
             glVertex3f( x+dx1, y+dy1, z );
             glVertex3f( x+dx2, y+dy2, z );
             glVertex3f( x,     y,     z+h );
         glEnd();
 
-        // Рисуване на парче от основата
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РѕСЃРЅРѕРІР°С‚Р°
         glBegin( GL_LINE_LOOP );
             glVertex3f( x,     y,     z );
             glVertex3f( x+dx1, y+dy1, z );
@@ -343,7 +343,7 @@ void drawSolidCylinder ( float x, float y, float z, float r, float h )
         float dx2 = r*cos(alpha+dalpha);
         float dy2 = r*sin(alpha+dalpha);
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_POLYGON );
             glNormal3f( cos(alpha+dalpha/2), sin(alpha+dalpha/2), 0 );
             glVertex3f( x+dx1, y+dy1, z );
@@ -352,7 +352,7 @@ void drawSolidCylinder ( float x, float y, float z, float r, float h )
             glVertex3f( x+dx1, y+dy1, z+h );
         glEnd();
 
-        // Рисуване на парче от долната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РґРѕР»РЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, -1 );
             glVertex3f( x,     y,     z );
@@ -360,7 +360,7 @@ void drawSolidCylinder ( float x, float y, float z, float r, float h )
             glVertex3f( x+dx2, y+dy2, z );
         glEnd();
 
-        // Рисуване на парче от горната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РіРѕСЂРЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, 1 );
             glVertex3f( x,     y,     z+h );
@@ -391,7 +391,7 @@ void drawSolidCone ( float x, float y, float z, float r, float h )
         float ny = sin(alpha+dalpha/2)*cosbeta;
         float nz = sinbeta;
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_POLYGON );
             glNormal3f( nx, ny, nz );
             glVertex3f( x+dx1, y+dy1, z );
@@ -399,7 +399,7 @@ void drawSolidCone ( float x, float y, float z, float r, float h )
             glVertex3f( x,     y,     z+h );
         glEnd();
 
-        // Рисуване на парче от основата
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РѕСЃРЅРѕРІР°С‚Р°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, -1 );
             glVertex3f( x,     y,     z );
@@ -493,7 +493,7 @@ void drawSmoothCylinder ( float x, float y, float z, float r, float h )
         float dx2 = r*cos(alpha+dalpha);
         float dy2 = r*sin(alpha+dalpha);
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_POLYGON );
             glNormal3f( cos(alpha), sin(alpha), 0 );
             glVertex3f( x+dx1, y+dy1, z+h );
@@ -503,7 +503,7 @@ void drawSmoothCylinder ( float x, float y, float z, float r, float h )
             glVertex3f( x+dx2, y+dy2, z+h );
         glEnd();
 
-        // Рисуване на парче от долната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РґРѕР»РЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, -1 );
             glVertex3f( x,     y,     z );
@@ -511,7 +511,7 @@ void drawSmoothCylinder ( float x, float y, float z, float r, float h )
             glVertex3f( x+dx2, y+dy2, z );
         glEnd();
 
-        // Рисуване на парче от горната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РіРѕСЂРЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, 1 );
             glVertex3f( x,     y,     z+h );
@@ -540,7 +540,7 @@ void drawSmoothCone ( float x, float y, float z, float r, float h )
         float cosbeta = h/sqrt(h*h+r*r);
         float sinbeta = r/sqrt(h*h+r*r);
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_POLYGON );
             glNormal3f( cos(alpha)*cosbeta, sin(alpha)*cosbeta, sinbeta );
             glVertex3f( x+dx1, y+dy1, z );
@@ -552,7 +552,7 @@ void drawSmoothCone ( float x, float y, float z, float r, float h )
             glVertex3f( x,     y,     z+h );
         glEnd();
 
-        // Рисуване на парче от основата
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РѕСЃРЅРѕРІР°С‚Р°
         glBegin( GL_POLYGON );
             glNormal3f( 0, 0, -1 );
             glVertex3f( x,     y,     z );
@@ -639,10 +639,10 @@ void drawSmoothEllipsoid( float x, float y, float z, float rx, float ry, float r
 }
 
 void drawSmoothEllipsoidPatch(
-        float x, float y, float z,     // координати
-        float rx, float ry, float rz,  // размери
-        float a1, float a2,            // хоризонтален диапазон
-        float b1, float b2             // вертикален диапазон
+        float x, float y, float z,     // РєРѕРѕСЂРґРёРЅР°С‚Рё
+        float rx, float ry, float rz,  // СЂР°Р·РјРµСЂРё
+        float a1, float a2,            // С…РѕСЂРёР·РѕРЅС‚Р°Р»РµРЅ РґРёР°РїР°Р·РѕРЅ
+        float b1, float b2             // РІРµСЂС‚РёРєР°Р»РµРЅ РґРёР°РїР°Р·РѕРЅ
     )
 {
     float alpha;
@@ -695,7 +695,7 @@ void drawUnitCylinder ( )
         float x2 = x1*dx-y1*dy;
         float y2 = y1*dx+x1*dy;
 
-        // Рисуване на околна стена
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РѕРєРѕР»РЅР° СЃС‚РµРЅР°
         glBegin( GL_POLYGON );
             glNormal3f( x1, y1, 0 );
             glVertex3f( x1, y1, 0 );
@@ -705,7 +705,7 @@ void drawUnitCylinder ( )
             glVertex3f( x2, y2, 0 );
         glEnd();
 
-        // Рисуване на парче от долната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РґРѕР»РЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f(  0,  0, -1 );
             glVertex3f(  0,  0,  0 );
@@ -713,7 +713,7 @@ void drawUnitCylinder ( )
             glVertex3f( x2, y2,  0 );
         glEnd();
 
-        // Рисуване на парче от горната основа
+        // Р РёСЃСѓРІР°РЅРµ РЅР° РїР°СЂС‡Рµ РѕС‚ РіРѕСЂРЅР°С‚Р° РѕСЃРЅРѕРІР°
         glBegin( GL_POLYGON );
             glNormal3f(  0,  0, 1 );
             glVertex3f(  0,  0, 1 );
